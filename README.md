@@ -1,6 +1,6 @@
 # MechPilot — Multi-agent Engineering Copilot
 
-A responsive web app for Windows, iPhone, Android and desktop browsers. It uses four sequential server-side AI calls through OpenRouter:
+A responsive web app for Windows, iPhone, Android and desktop browsers. It uses four sequential server-side AI calls through OpenRouter: 
 1. Fault diagnosis
 2. Maintenance planning (consumes diagnosis)
 3. Efficiency optimisation (consumes diagnosis + maintenance)
