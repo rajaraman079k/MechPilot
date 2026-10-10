@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#101713"><meta name="description" content="MechPilot: multi-agent mechanical engineering decision support.">
+<title>MechPilot — Engineering Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css"></head><body>
+<header class="topbar">
+  <a href="#home" class="brand" aria-label="MechPilot home"><span class="brand-mark">M<span>.</span></span><span class="brand-copy">MECHPILOT<small>ENGINEERING INTELLIGENCE</small></span></a>
+  <nav class="desktop-nav" aria-label="Main navigation"><a href="#how">How it works</a><a href="#workbench">Workbench</a><a href="#about">About</a></nav>
+  <div class="top-actions"><span class="backend-status" id="backendStatus"><i></i><span>Connecting</span></span><button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode" title="Toggle light/dark mode"><span id="themeIcon">☾</span></button><button class="menu-button" id="menuButton" aria-label="Open navigation">☰</button></div>
+</header>
+<nav class="mobile-nav" id="mobileNav" hidden><a href="#how">How it works</a><a href="#workbench">Workbench</a><a href="#about">About</a></nav>
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="eyebrow-line"></span> MULTI-AGENT ENGINEERING AI</div>
+    <h1>Complex problems.<br><em>Clear next steps.</em></h1>
+    <p class="hero-lede">A coordinated team of AI agents for mechanical diagnosis, maintenance planning, efficiency and safety review — built to reason through the case, not just match keywords.</p>
+    <div class="hero-actions"><a class="button button-primary" href="#workbench">Start an analysis <span>↗</span></a><a class="text-link" href="#how">Explore the system <span>↓</span></a></div>
+    <div class="hero-footnote"><span class="tiny-dot"></span> Four specialist agents · One reviewed recommendation</div>
+  </div>
+  <div class="hero-art" aria-label="Four coordinated engineering agent stages">
+    <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+    <div class="core"><div class="core-grid"></div><div class="core-symbol">M<span>.</span></div><div class="core-caption">ENGINEERING<br>INTELLIGENCE</div></div>
+    <div class="float-card float-diagnosis"><span class="float-icon">⌕</span><span><b>Diagnose</b><small>Find the signal</small></span><i>01</i></div>
+    <div class="float-card float-plan"><span class="float-icon">↗</span><span><b>Plan</b><small>Order the actions</small></span><i>02</i></div>
+    <div class="float-card float-optimize"><span class="float-icon">⌁</span><span><b>Optimise</b><small>Measure improvement</small></span><i>03</i></div>
+    <div class="float-card float-safety"><span class="float-icon">◇</span><span><b>Review</b><small>Check the risk</small></span><i>04</i></div>
+    <div class="art-label">AGENTS IN COORDINATION <span>● LIVE WORKFLOW</span></div>
+  </div>
+</section>
+<section class="trust-strip"><div><span class="strip-number">01</span><span><b>Context-led reasoning</b><small>Uses the case you actually describe</small></span></div><div><span class="strip-number">02</span><span><b>Sequential specialists</b><small>Each stage builds on the last</small></span></div><div><span class="strip-number">03</span><span><b>Safety reviewed</b><small>Independent final review gate</small></span></div></section>
+
+<section class="section workflow-section" id="how">
+  <div class="section-heading"><div><div class="eyebrow">THE METHOD / 01—04</div><h2>More than a prompt.<br><em>A process.</em></h2></div><p>Each agent has a distinct role, a defined output, and the context from every stage before it. The final review can flag or challenge unsafe recommendations.</p></div>
+  <div class="workflow-grid">
+    <article class="workflow-card"><div class="work-top"><span>01 / ANALYSE</span><span class="work-symbol">⌕</span></div><h3>Fault diagnosis</h3><p>Separates observed facts from possible causes and proposes tests that distinguish between them.</p><div class="work-bottom">HYPOTHESES + EVIDENCE</div></article>
+    <article class="workflow-card"><div class="work-top"><span>02 / SEQUENCE</span><span class="work-symbol">↗</span></div><h3>Maintenance planner</h3><p>Builds an ordered inspection plan linked to the diagnostic hypotheses and safety prerequisites.</p><div class="work-bottom">ACTIONS + PREREQUISITES</div></article>
+    <article class="workflow-card"><div class="work-top"><span>03 / IMPROVE</span><span class="work-symbol">⌁</span></div><h3>Efficiency optimiser</h3><p>Looks for measurable quality, downtime and energy improvements without inventing savings.</p><div class="work-bottom">METRICS + TRADE-OFFS</div></article>
+    <article class="workflow-card workflow-safety"><div class="work-top"><span>04 / REVIEW</span><span class="work-symbol">◇</span></div><h3>Safety & quality</h3><p>Reviews the entire plan, flags hazards and identifies when work should stop pending expert assessment.</p><div class="work-bottom">RISK + SAFE NEXT STEP</div></article>
+  </div>
+</section>
+
+<section class="workbench-section" id="workbench">
+  <div class="section-heading"><div><div class="eyebrow">ENGINEERING WORKBENCH</div><h2>Start with the <em>symptoms.</em></h2></div><p>Describe the real situation. MechPilot will run all four specialists, pass findings between stages, and return a traceable assessment.</p></div>
+  <div class="bench-layout">
+    <form class="input-card" id="analysisForm">
+      <div class="card-head"><div><div class="eyebrow">01 / CASE FILE</div><h3>What needs attention?</h3></div><span class="agent-count">4 AGENTS</span></div>
+      <label for="asset">Equipment / asset</label><select id="asset" name="asset" required><option>CNC machining centre</option><option>HVAC compressor / chiller</option><option>Hydraulic power unit</option><option>Rotating equipment / pump</option><option>Thermal system / heat exchanger</option><option>Other / mixed system</option></select>
+      <label for="criticality">Equipment criticality</label><select id="criticality" name="criticality"><option value="medium">Medium — production affected</option><option value="low">Low — non-critical equipment</option><option value="high">High — critical equipment</option></select>
+      <label for="objective">Primary objective</label><select id="objective" name="objective"><option>Balance repair cost, safety, quality and energy use</option><option>Minimise downtime and restore production safely</option><option>Improve energy efficiency and sustainability</option><option>Improve surface finish and reduce tool wear</option><option>Find the root cause before replacing parts</option></select>
+      <div class="label-row"><label for="symptoms">Observed symptoms & context</label><span id="charCount">0 / 6000</span></div>
+      <textarea id="symptoms" name="symptoms" maxlength="6000" minlength="12" required placeholder="What happened? When did it start? What changed beforehand? Include measured values, alarms, operating conditions and what you have already checked."></textarea>
+      <div class="example-row"><span>Try an example</span><button type="button" class="example-chip" data-example="cnc">CNC chatter</button><button type="button" class="example-chip" data-example="hydraulic">Hydraulic leak</button><button type="button" class="example-chip" data-example="pump">Pump vibration</button></div>
+      <button class="button button-primary submit-button" id="runButton" type="submit"><span>Run coordinated analysis</span><b>↗</b></button>
+      <p class="form-footnote"><span class="tiny-dot"></span> Live AI · four sequential calls · no key in the browser</p>
+      <div class="inline-error" id="inlineError" role="alert" hidden></div>
+    </form>
+    <aside class="bench-aside">
+      <div class="aside-dark"><div class="eyebrow">THE OUTPUT</div><h3>Not just an answer.<br><em>A case file.</em></h3><p>Every run returns the reasoning trail: candidate causes, tests, maintenance steps, metrics, risks and the information still missing.</p><div class="aside-metric"><span>4</span><small>specialist<br>stages per run</small><span class="metric-divider"></span><span>1</span><small>consolidated<br>assessment</small></div></div>
+      <div class="aside-note"><span class="note-icon">i</span><p>AI outputs are engineering decision support, not confirmed diagnoses. Always follow OEM instructions, site procedures and qualified engineering judgement.</p></div>
+    </aside>
+  </div>
+  <section class="report-section" id="reportSection" hidden>
+    <div class="report-head"><div><div class="eyebrow">ANALYSIS COMPLETE</div><h2>Your engineering <em>assessment.</em></h2><p id="reportMeta"></p></div><div class="report-actions"><button class="button button-secondary" id="exportJson">Export JSON ↓</button><button class="button button-secondary" id="exportMarkdown">Export report ↓</button></div></div>
+    <div class="final-verdict" id="verdict"></div>
+    <div class="report-grid"><div class="report-main" id="reportStages"></div><aside class="report-side"><div class="side-card"><div class="eyebrow">STILL NEEDED</div><h3>Close the gaps</h3><ul id="missingList"></ul></div><div class="side-card followup-card"><div class="eyebrow">NEXT QUESTIONS</div><h3>Improve the diagnosis</h3><ul id="questionsList"></ul></div><div class="side-card"><div class="eyebrow">SAFETY GATE</div><p id="safetyFinal"></p></div></aside></div>
+  </section>
+</section>
+<section class="closing" id="about"><div class="closing-mark">M<span>.</span></div><div><div class="eyebrow">MECHPILOT / STUDENT EDITION</div><h2>Mechanical engineering,<br><em>augmented by AI.</em></h2></div><p>Designed to bring diagnosis, maintenance, optimisation and safety review into one clear workflow. Built for learning, prototyping and engineering discussion.</p></section>
+</main>
+<footer class="footer"><a href="#home" class="footer-brand">MECHPILOT <span>M.</span></a><span>ENGINEERING INTELLIGENCE · V1.0</span><span>Designed for desktop & mobile</span></footer>
+
+<div class="loading-overlay" id="loadingOverlay" hidden role="dialog" aria-modal="true" aria-labelledby="loadingTitle">
+  <div class="loading-panel">
+    <div class="loader-orb"><div class="loader-ring"></div><div class="loader-core">M<span>.</span></div></div>
+    <div class="eyebrow">MECHPILOT / ORCHESTRATION</div><h2 id="loadingTitle">Thinking through<br><em>the engineering.</em></h2><p id="loadingMessage">Preparing your case file…</p>
+    <div class="loading-progress"><span id="loadingProgress"></span></div><div class="loading-count"><span id="loadingStep">INITIALISING</span><span id="loadingPercent">0%</span></div>
+    <div class="loading-stages"><div class="loading-stage" data-loading-stage="0"><span>01</span><div><b>Fault diagnosis</b><small>Hypotheses & evidence</small></div><i>○</i></div><div class="loading-stage" data-loading-stage="1"><span>02</span><div><b>Maintenance planner</b><small>Ordered actions</small></div><i>○</i></div><div class="loading-stage" data-loading-stage="2"><span>03</span><div><b>Efficiency optimiser</b><small>Metrics & trade-offs</small></div><i>○</i></div><div class="loading-stage" data-loading-stage="3"><span>04</span><div><b>Safety reviewer</b><small>Final risk gate</small></div><i>○</i></div></div>
+    <p class="loading-caption">Each specialist receives the findings from the previous stage.</p>
+  </div>
+</div>
+<script src="/app.js" defer></script></body></html>

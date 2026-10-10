@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: mechpilot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: OPENROUTER_MODEL
+        value: openrouter/free
+      - key: OPENROUTER_API_KEY
+        sync: false
